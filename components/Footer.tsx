@@ -68,22 +68,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
-          <div>
-            <p className="text-white font-semibold text-sm mb-4">Navigation</p>
-            <ul className="space-y-2">
-              {navLinks.map(({ href, label }) => (
-                <li key={href}>
-                  <a
-                    href={href}
-                    className="text-sm text-neutral-400 hover:text-white transition-colors"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact */}
           <div>

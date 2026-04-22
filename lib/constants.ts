@@ -5,7 +5,7 @@ export const WHATSAPP_MESSAGE = encodeURIComponent(
 );
 export const WHATSAPP_LINK = `${WHATSAPP_URL}?text=${WHATSAPP_MESSAGE}`;
 
-export const EMAIL = "swan@example.com";
+export const EMAIL = "swan.gani@hotmail.fr";
 
 export const PRICING = [
   {
