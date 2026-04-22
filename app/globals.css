@@ -5,10 +5,15 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
     @apply text-neutral-800 bg-white;
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   ::selection {
