@@ -36,6 +36,9 @@ export const metadata: Metadata = {
       "Certified French teacher offering personalized online lessons for all levels. Free 30-min trial!",
     type: "website",
   },
+  icons: {
+    icon: '/favicon.ico',
+  }
 };
 
 export default function RootLayout({

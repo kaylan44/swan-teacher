@@ -108,7 +108,7 @@ export const TRANSLATIONS = {
       cta: "Free Trial",
     },
     hero: {
-      badge: "🇫🇷 French & English Teacher",
+      badge: "French & English Teacher",
       headline: "Your new favourite way to learn French or English — online!",
       subheadline: "Fun, laid-back and super effective lessons. Whether you're starting from zero or levelling up — you're in exactly the right place.",
       cta1: "Grab your free trial 🎉",
@@ -215,7 +215,7 @@ export const TRANSLATIONS = {
       cta: "Essai gratuit",
     },
     hero: {
-      badge: "🇫🇷 Professeure de Français & Anglais",
+      badge: "Professeure de Français & Anglais",
       headline: "Apprenez le français ou l'anglais en ligne — avec le sourire !",
       subheadline: "Des cours fun, bienveillants et vraiment efficaces. Que vous partiez de zéro ou que vous souhaitiez progresser — vous êtes exactement au bon endroit.",
       cta1: "Réserver mon essai gratuit 🎉",
@@ -322,7 +322,7 @@ export const TRANSLATIONS = {
       cta: "Clase gratis",
     },
     hero: {
-      badge: "🇫🇷 Profesora de Francés e Inglés",
+      badge: "Profesora de Francés e Inglés",
       headline: "¡Aprende francés o inglés online — y disfrútalo de verdad!",
       subheadline: "Clases divertidas, cercanas y muy efectivas. Tanto si empiezas desde cero como si quieres mejorar — estás exactamente donde debes estar.",
       cta1: "¡Quiero mi clase gratis! 🎉",
