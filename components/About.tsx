@@ -1,12 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK } from "@/lib/constants";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 import FadeIn from "./FadeIn";
 
 export default function About() {
   const { t } = useLanguage();
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadImage = async () => {
+      const imageDoc = await client.fetch(
+        '*[_type == "imageType" && title == "secondary-picture"][0]',
+        { id: "secondary-picture" },
+      );
+
+      if (imageDoc?.image) {
+        setImageSrc(urlFor(imageDoc.image).width(800).height(1000).url());
+      }
+    };
+
+    loadImage();
+  }, []);
 
   return (
     <section id="about" className="section-pad bg-white">
@@ -18,7 +37,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-amber-100 rounded-3xl -rotate-2 scale-105 opacity-50" />
               <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/5] max-w-sm mx-auto lg:mx-0">
                 <Image
-                  src="/secondary-img-swan.jpg"
+                  src={imageSrc ?? "/secondary-img-swan.jpg"}
                   alt="Swan teaching online with warmth and passion"
                   fill
                   className="object-cover"

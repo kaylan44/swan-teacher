@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK } from "@/lib/constants";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -16,6 +19,21 @@ const fadeUp = {
 
 export default function Hero() {
   const { t } = useLanguage();
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadImage = async () => {
+      const imageDoc = await client.fetch(
+        '*[_type == "imageType" && title == "profile-picture"][0]',
+      );
+
+      if (imageDoc?.image) {
+        setImageSrc(urlFor(imageDoc.image).width(900).height(1200).url());
+      }
+    };
+
+    loadImage();
+  }, []);
 
   return (
     <section
@@ -114,7 +132,7 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-200 to-primary-400 rotate-3 scale-105 opacity-30" />
               <div className="relative w-72 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/profile-img.png"
+                  src={imageSrc ?? "/profile-img.png"}
                   alt="Swan — French and English teacher smiling"
                   fill
                   className="object-cover object-top"

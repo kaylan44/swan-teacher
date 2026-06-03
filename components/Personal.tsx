@@ -1,12 +1,30 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK } from "@/lib/constants";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 import FadeIn from "./FadeIn";
 
 export default function Personal() {
   const { t } = useLanguage();
+  const [mainImageSrc, setMainImageSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadImage = async () => {
+      const imageDoc = await client.fetch(
+        '*[_type == "imageType" && title == "lesson-picture"][0]'
+      );
+
+      if (imageDoc?.image) {
+        setMainImageSrc(urlFor(imageDoc.image).width(600).height(760).url());
+      }
+    };
+
+    loadImage();
+  }, []);
 
   return (
     <section id="personal" className="section-pad bg-white overflow-hidden">
@@ -58,7 +76,7 @@ export default function Personal() {
               {/* Main image */}
               <div className="absolute top-0 right-0 w-64 h-80 rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
+                  src={mainImageSrc ?? "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"}
                   alt="Swan enjoying her hobbies and travels"
                   fill
                   className="object-cover"
@@ -86,7 +104,7 @@ export default function Personal() {
             {/* Mobile: single image */}
             <div className="lg:hidden relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+                src={mainImageSrc ?? "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"}
                 alt="Swan enjoying her hobbies"
                 fill
                 className="object-cover"
