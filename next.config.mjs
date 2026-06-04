@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ["sanity", "@sanity/vision"],
   images: {
     remotePatterns: [
       {
