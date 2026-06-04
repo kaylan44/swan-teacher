@@ -25,17 +25,17 @@ export const CREDENTIALS = [
     icon: "🎓",
     title: { en: "Teaching Degree", fr: "Diplôme d'enseignement", es: "Título de enseñanza" },
     desc: {
-      en: "Certified primary school teacher from France, trained in pedagogy and child development",
-      fr: "Professeure des écoles certifiée, formée en pédagogie et développement de l'enfant",
+      en: "Master’s degree in Teaching, Education and Training (MEEF) – Teaching experience with children, teenagers, and adults in France and internationally",
+      fr: "Master MEEF - Expérience de l'enseignement auprès d'enfants, d'adolescents et d'adultes, en France et à l'international",
       es: "Maestra certificada de escuela primaria en Francia, formada en pedagogía",
     },
   },
   {
     icon: "📜",
-    title: { en: "FLE Certification", fr: "Certification FLE", es: "Certificación FLE" },
+    title: { en: "FLE Certification", fr: "Diplôme de Français Langue Étrangère (FLE)", es: "Certificación FLE" },
     desc: {
       en: "Specialized certification in French as a Foreign Language (Français Langue Étrangère)",
-      fr: "Certification spécialisée en Français Langue Étrangère",
+      fr: "Formation spécialisée dans l'enseignement du français aux apprenants non francophones.",
       es: "Certificación especializada en Francés como Lengua Extranjera",
     },
   },
@@ -43,8 +43,8 @@ export const CREDENTIALS = [
     icon: "🏫",
     title: { en: "Classroom Experience", fr: "Expérience en classe", es: "Experiencia en aula" },
     desc: {
-      en: "Years of teaching in French primary schools and high schools across multiple regions",
-      fr: "Des années d'enseignement dans les écoles primaires et lycées français",
+      en: "Several years of teaching experience in France and internationally, working with children, teenagers, and adults.",
+      fr: "Plusieurs années d'expérience dans l'enseignement, en France et à l'international, auprès d'enfants, d'adolescents et d'adultes.",
       es: "Años de experiencia enseñando en escuelas primarias y secundarias francesas",
     },
   },
@@ -177,7 +177,12 @@ export const TRANSLATIONS = {
     pricing: {
       title: "Simple, Fair Pricing",
       subtitle: "Pick what works for you",
-      microcopy: "No subscription • No commitment • Cancel anytime • Just good lessons",
+      microcopy: "Basic rates • No commitment • Free cancellation up to 24 hours before the lesson",
+      notes: [
+        "✓ 5% discount for a 3-month commitment",
+        "✓ 10% discount for a 6-month commitment",
+        "✓ Group pricing by quote, contact me for personalized support",
+      ],
       cta: "Let's get started on WhatsApp",
     },
     testimonials: {
@@ -289,9 +294,14 @@ export const TRANSLATIONS = {
       cta: "👋 Réserver mon essai gratuit sur WhatsApp",
     },
     pricing: {
-      title: "Des tarifs simples et honnêtes",
+      title: "Des cours personnalisés, avec des tarifs clairs et sans surprise.",
       subtitle: "Choisissez ce qui vous convient",
       microcopy: "Sans abonnement • Sans engagement • Annulation libre • Que de bons cours",
+      notes: [
+        "✓ Réduction de 5 % pour un engagement de 3 mois",
+        "✓ Réduction de 10 % pour un engagement de 6 mois",
+        "✓ Tarifs de groupe sur devis, contactez-moi pour un accompagnement personnalisé",
+      ],
       cta: "On commence sur WhatsApp ?",
     },
     testimonials: {
@@ -399,6 +409,11 @@ export const TRANSLATIONS = {
       title: "Precios simples y justos",
       subtitle: "Elige lo que te va mejor",
       microcopy: "Sin suscripción • Sin compromiso • Cancela cuando quieras • Solo buenas clases",
+      notes: [
+        "✓ 5% de descuento por compromiso de 3 meses",
+        "✓ 10% de descuento por compromiso de 6 meses",
+        "✓ Tarifas de grupo bajo presupuesto, contáctame para un acompañamiento personalizado",
+      ],
       cta: "¿Empezamos en WhatsApp?",
     },
     testimonials: {

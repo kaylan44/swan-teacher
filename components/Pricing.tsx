@@ -67,6 +67,11 @@ export default function Pricing() {
           <p className="text-center text-sm text-neutral-400 font-medium">
             {t.pricing.microcopy}
           </p>
+          <div className="mt-4 space-y-2 text-center text-sm text-neutral-500 italic">
+            {t.pricing.notes?.map((note, index) => (
+              <p key={index}>{note}</p>
+            ))}
+          </div>
         </FadeIn>
       </div>
     </section>

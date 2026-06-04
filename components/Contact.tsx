@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, FormEvent } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { WHATSAPP_LINK, WHATSAPP_MESSAGE, EMAIL } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
 import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
@@ -12,6 +11,7 @@ export default function Contact() {
   const whatsappLink = site?.whatsappNumber
     ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
     : WHATSAPP_LINK;
+  /*
   const email = site?.contactEmail ?? EMAIL;
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -32,6 +32,7 @@ export default function Contact() {
       setSubmitted(true);
     }, 1000);
   }
+  */
 
   return (
     <section id="contact" className="section-pad bg-neutral-50">
@@ -79,6 +80,7 @@ export default function Contact() {
               </a>
 
               {/* Email */}
+              {/*
               <a
                 href={`mailto:${email}`}
                 className="flex items-center gap-4 bg-white hover:bg-neutral-50 text-neutral-800 rounded-2xl p-5 border border-neutral-200 transition-all duration-200 hover:-translate-y-0.5 shadow-sm group"
@@ -94,6 +96,7 @@ export default function Contact() {
                   →
                 </span>
               </a>
+              */}
 
               {/* Trust signals */}
               <div className="bg-primary-50 rounded-2xl p-5 border border-primary-100">
@@ -108,6 +111,7 @@ export default function Contact() {
           </FadeIn>
 
           {/* Contact Form */}
+          {/*
           <FadeIn direction="right" delay={0.2}>
             <div className="card p-7 border-2">
               {submitted ? (
@@ -204,6 +208,7 @@ export default function Contact() {
               )}
             </div>
           </FadeIn>
+          */}
         </div>
       </div>
     </section>
