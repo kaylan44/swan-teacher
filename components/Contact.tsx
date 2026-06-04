@@ -2,11 +2,17 @@
 
 import { useState, FormEvent } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { WHATSAPP_LINK, EMAIL } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE, EMAIL } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
+  const email = site?.contactEmail ?? EMAIL;
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -46,7 +52,7 @@ export default function Contact() {
             <div className="space-y-4 h-full flex flex-col justify-center">
               {/* WhatsApp primary CTA */}
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-[#25D366] hover:bg-[#1ebe5c] text-white rounded-2xl p-5 transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-green-200 group"
@@ -74,7 +80,7 @@ export default function Contact() {
 
               {/* Email */}
               <a
-                href={`mailto:${EMAIL}`}
+                href={`mailto:${email}`}
                 className="flex items-center gap-4 bg-white hover:bg-neutral-50 text-neutral-800 rounded-2xl p-5 border border-neutral-200 transition-all duration-200 hover:-translate-y-0.5 shadow-sm group"
               >
                 <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -82,7 +88,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-grow">
                   <p className="font-semibold">{t.contact.emailCta}</p>
-                  <p className="text-neutral-500 text-sm">{EMAIL}</p>
+                  <p className="text-neutral-500 text-sm">{email}</p>
                 </div>
                 <span className="text-neutral-400 group-hover:translate-x-1 transition-transform text-xl">
                   →
@@ -114,7 +120,7 @@ export default function Contact() {
                     In the meantime, feel free to reach out on WhatsApp!
                   </p>
                   <a
-                    href={WHATSAPP_LINK}
+                    href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary mt-6 text-sm"

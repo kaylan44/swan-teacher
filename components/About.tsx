@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState, type ReactNode } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import FadeIn from "./FadeIn";
@@ -52,22 +53,38 @@ function renderPortableText(blocks: any[]): ReactNode {
       );
 
       const commonProps = {
-        key: block._key ?? index,
         className: "text-neutral-600 leading-relaxed mb-4 text-lg",
       };
 
       switch (block.style) {
         case "h1":
-          return <h1 {...commonProps}>{children}</h1>;
+          return (
+            <h1 key={block._key ?? index} {...commonProps}>
+              {children}
+            </h1>
+          );
         case "h2":
-          return <h2 {...commonProps}>{children}</h2>;
+          return (
+            <h2 key={block._key ?? index} {...commonProps}>
+              {children}
+            </h2>
+          );
         case "h3":
-          return <h3 {...commonProps}>{children}</h3>;
+          return (
+            <h3 key={block._key ?? index} {...commonProps}>
+              {children}
+            </h3>
+          );
         case "h4":
-          return <h4 {...commonProps}>{children}</h4>;
+          return (
+            <h4 key={block._key ?? index} {...commonProps}>
+              {children}
+            </h4>
+          );
         case "blockquote":
           return (
             <blockquote
+              key={block._key ?? index}
               {...commonProps}
               className="border-l-4 border-primary-200 pl-4 italic text-neutral-700"
             >
@@ -75,7 +92,11 @@ function renderPortableText(blocks: any[]): ReactNode {
             </blockquote>
           );
         default:
-          return <p {...commonProps}>{children}</p>;
+          return (
+            <p key={block._key ?? index} {...commonProps}>
+              {children}
+            </p>
+          );
       }
     }
 
@@ -158,6 +179,11 @@ export default function About() {
     loadContent();
   }, [lang]);
 
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
+
   return (
     <section id="about" className="section-pad bg-white">
       <div className="max-w-6xl mx-auto container-pad">
@@ -220,7 +246,7 @@ export default function About() {
               </div>
 
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"

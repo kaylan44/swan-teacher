@@ -1,10 +1,16 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
-import { WHATSAPP_LINK, EMAIL } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE, EMAIL } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 
 export default function Footer() {
   const { t } = useLanguage();
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
+  const email = site?.contactEmail ?? EMAIL;
   const year = new Date().getFullYear();
 
   const navLinks = [
@@ -25,7 +31,7 @@ export default function Footer() {
           </h3>
           <p className="mb-6 text-primary-200">{t.hero.trust}</p>
           <a
-            href={WHATSAPP_LINK}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-primary-700 font-bold px-8 py-3.5 rounded-full hover:bg-primary-50 transition-colors shadow-lg text-base"
@@ -48,7 +54,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mt-4">
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -59,7 +65,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href={`mailto:${EMAIL}`}
+                href={`mailto:${email}`}
                 aria-label="Email"
                 className="w-9 h-9 bg-neutral-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors"
               >
@@ -75,7 +81,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href={WHATSAPP_LINK}
+                  href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-2"
@@ -85,10 +91,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={`mailto:${EMAIL}`}
+                  href={`mailto:${email}`}
                   className="text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-2"
                 >
-                  ✉️ {EMAIL}
+                  ✉️ {email}
                 </a>
               </li>
               <li className="text-sm text-neutral-500 flex items-center gap-2">

@@ -1,11 +1,16 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
 export default function Trial() {
   const { t } = useLanguage();
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
 
   return (
     <section id="trial" className="section-pad bg-gradient-to-br from-primary-50 via-rose-50 to-amber-50">
@@ -36,7 +41,7 @@ export default function Trial() {
 
         <FadeIn delay={0.2}>
           <a
-            href={WHATSAPP_LINK}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary text-base px-8 py-4 text-lg"

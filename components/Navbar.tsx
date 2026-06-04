@@ -3,13 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -61,7 +66,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <LanguageSwitcher />
             <a
-              href={WHATSAPP_LINK}
+              href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm py-2 px-4"
@@ -104,7 +109,7 @@ export default function Navbar() {
             <div className="pt-3 border-t border-neutral-100 flex flex-col gap-2 px-3">
               <LanguageSwitcher />
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-sm w-full text-center"

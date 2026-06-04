@@ -4,7 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
@@ -20,6 +21,10 @@ const fadeUp = {
 export default function Hero() {
   const { t } = useLanguage();
   const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
 
   useEffect(() => {
     const loadImage = async () => {
@@ -87,7 +92,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-3 mb-8"
             >
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-base px-7 py-3.5"
@@ -95,7 +100,7 @@ export default function Hero() {
                 🎉 {t.hero.cta1}
               </a>
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-base px-7 py-3.5"

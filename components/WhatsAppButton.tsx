@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 
 export default function WhatsAppButton() {
   const [visible, setVisible] = useState(false);
@@ -12,6 +13,11 @@ export default function WhatsAppButton() {
     const timer = setTimeout(() => setVisible(true), 1500);
     return () => clearTimeout(timer);
   }, []);
+
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
 
   return (
     <AnimatePresence>
@@ -41,7 +47,7 @@ export default function WhatsAppButton() {
 
           {/* Button */}
           <a
-            href={WHATSAPP_LINK}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with Swan on WhatsApp"

@@ -1,11 +1,26 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
-import { PRICING, WHATSAPP_LINK } from "@/lib/constants";
+import { PRICING, WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
 export default function Pricing() {
   const { t } = useLanguage();
+  const site = useSiteData();
+  const whatsappLink = site?.whatsappNumber
+    ? `https://wa.me/${site.whatsappNumber}?text=${WHATSAPP_MESSAGE}`
+    : WHATSAPP_LINK;
+
+  const pricing = PRICING.map((plan) => {
+    if (plan.duration.includes("40")) {
+      return { ...plan, price: site?.price40 ?? plan.price };
+    }
+    if (plan.duration.includes("60")) {
+      return { ...plan, price: site?.price60 ?? plan.price };
+    }
+    return plan;
+  });
 
   return (
     <section id="pricing" className="section-pad bg-white">
@@ -20,7 +35,7 @@ export default function Pricing() {
         </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-          {PRICING.map((plan, i) => (
+          {pricing.map((plan, i) => (
             <FadeIn key={i} delay={i * 0.12}>
               <div className="card border-2 hover:border-primary-100 rounded-3xl p-8 text-center h-full transition-all duration-300 hover:-translate-y-1">
                 <p className="text-sm font-semibold uppercase tracking-wide mb-2 text-neutral-400">
@@ -36,7 +51,7 @@ export default function Pricing() {
                 </p>
 
                 <a
-                  href={WHATSAPP_LINK}
+                  href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full font-semibold text-sm bg-primary-600 text-white hover:bg-primary-700 transition-all duration-200"

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
+import { SiteDataProvider } from "@/lib/SiteDataContext";
+import { client } from "@/sanity/lib/client";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -41,17 +43,23 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const important = await client.fetch(
+    '*[_type == "importantData" && identifier == "site-info"][0]{contactEmail,whatsappNumber,price40,price60}'
+  );
+
   return (
     <html lang="en" className="scroll-smooth">
       <body
         className={`${dmSans.variable} ${playfair.variable} font-sans antialiased bg-white text-neutral-800`}
       >
-        <LanguageProvider>{children}</LanguageProvider>
+        <SiteDataProvider initialData={important ?? null}>
+          <LanguageProvider>{children}</LanguageProvider>
+        </SiteDataProvider>
       </body>
     </html>
   );
