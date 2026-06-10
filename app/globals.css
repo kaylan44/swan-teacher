@@ -10,7 +10,8 @@
   }
 
   body {
-    @apply text-neutral-800 bg-white;
+    @apply bg-white;
+    color: #2D2D2D;
     position: relative;
     max-width: 100%;
     overflow-x: hidden;
