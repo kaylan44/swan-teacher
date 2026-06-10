@@ -208,7 +208,7 @@ export default function Personal() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                💬 Let&apos;s connect!
+                💬 {t.personal.cta}
               </a>
               
             </div>
@@ -240,8 +240,8 @@ export default function Personal() {
               {/* Floating badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-xl p-4 text-center z-10 border border-neutral-100">
                 <span className="text-3xl block mb-1">🌍</span>
-                <p className="text-xs font-bold text-neutral-700">Languages</p>
-                <p className="text-xs text-neutral-500">open worlds</p>
+                <p className="text-xs font-bold text-neutral-700">{t.personal.badgeTitle}</p>
+                <p className="text-xs text-neutral-500">{t.personal.badgeSubtitle}</p>
               </div>
             </div>
 

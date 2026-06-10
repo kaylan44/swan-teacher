@@ -109,10 +109,11 @@ export const TRANSLATIONS = {
     },
     hero: {
       badge: "French & English Teacher",
-      headline: "Your new favourite way to learn French or English — online!",
+      headline: "Your new favourite way to learn French or English, online!",
       subheadline: "Fun, laid-back and super effective lessons. Whether you're starting from zero or levelling up — you're in exactly the right place.",
       cta1: "Grab your free trial 🎉",
       cta2: "Say hi on WhatsApp",
+      trialBadge: "Free Trial",
       trust: "30-min free trial • Total beginners welcome • All levels",
     },
     about: {
@@ -128,6 +129,8 @@ export const TRANSLATIONS = {
     lessons: {
       title: "What We'll Work On",
       subtitle: "Pick your language — or both!",
+      ctaFrench: "Start learning French →",
+      ctaEnglish: "Start learning English →",
       french: {
         tag: "🌟 Starting from zero? Perfect!",
         title: "French Lessons",
@@ -177,13 +180,13 @@ export const TRANSLATIONS = {
     pricing: {
       title: "Simple, Fair Pricing",
       subtitle: "Pick what works for you",
+      cta: "Book on WhatsApp",
       microcopy: "Basic rates • No commitment • Free cancellation up to 24 hours before the lesson",
       notes: [
         "✓ 5% discount for a 3-month commitment",
         "✓ 10% discount for a 6-month commitment",
         "✓ Group pricing by quote, contact me for personalized support",
       ],
-      cta: "Let's get started on WhatsApp",
     },
     testimonials: {
       title: "Don't Just Take My Word For It",
@@ -192,6 +195,9 @@ export const TRANSLATIONS = {
     personal: {
       title: "A little bit about me",
       subtitle: "The human behind the lessons",
+      cta: "Let's connect!",
+      badgeTitle: "Languages",
+      badgeSubtitle: "open worlds",
       p1: "When I'm not teaching, you'll find me buried in a good book, plotting my next trip somewhere new, or bravely attempting a recipe I found online (sometimes it works out 😄).",
       p2: "I truly believe learning a language should feel like an adventure, not a chore. That's why I keep things warm, fun, and always human. No judgement, no pressure — just progress.",
       p3: "Languages changed my life. I'd love for them to change yours too.",
@@ -201,6 +207,9 @@ export const TRANSLATIONS = {
       title: "Ready to start? Let's go! 🚀",
       subtitle: "Drop me a message and let's figure out your first lesson",
       whatsappCta: "Chat with me on WhatsApp",
+      whatsappSubtitle: "Fastest response — usually within hours",
+      trustTitle: "Don't forget",
+      trustText: "Your first 30-minute lesson is completely free. No credit card, no commitment.",
       emailCta: "Or send me an email",
       form: {
         name: "Your name",
@@ -226,10 +235,11 @@ export const TRANSLATIONS = {
     },
     hero: {
       badge: "Professeure de Français & Anglais",
-      headline: "Apprenez le français ou l'anglais en ligne — avec le sourire !",
+      headline: "Apprenez le français ou l'anglais en ligne, avec le sourire !",
       subheadline: "Des cours fun, bienveillants et vraiment efficaces. Que vous partiez de zéro ou que vous souhaitiez progresser — vous êtes exactement au bon endroit.",
-      cta1: "Réserver mon essai gratuit 🎉",
-      cta2: "Dire bonjour sur WhatsApp",
+      cta1: "Essai gratuit 🎉",
+      cta2: "Contact sur WhatsApp",
+      trialBadge: "Essai gratuit",
       trust: "Essai gratuit 30 min • Grands débutants bienvenus • Tous niveaux",
     },
     about: {
@@ -245,6 +255,8 @@ export const TRANSLATIONS = {
     lessons: {
       title: "On va travailler sur quoi ?",
       subtitle: "Choisissez votre langue — ou les deux !",
+      ctaFrench: "Commencer le français →",
+      ctaEnglish: "Commencer l'anglais →",
       french: {
         tag: "🌟 Débutant complet ? Parfait !",
         title: "Cours de français",
@@ -288,7 +300,7 @@ export const TRANSLATIONS = {
       subtitle: "30 minutes, zéro pression, zéro engagement",
       includes: [
         { icon: "💬", text: "On fait connaissance et on parle de vos objectifs" },
-        { icon: "📊", text: "On évalue votre niveau ensemble (pas de test stressant !)" },
+        { icon: "📊", text: "On évalue votre niveau ensemble (0 tests stressant !)" },
         { icon: "🗺️", text: "On dessine votre parcours d'apprentissage sur mesure" },
       ],
       cta: "👋 Réserver mon essai gratuit sur WhatsApp",
@@ -296,21 +308,24 @@ export const TRANSLATIONS = {
     pricing: {
       title: "Des cours personnalisés, avec des tarifs clairs et sans surprise.",
       subtitle: "Choisissez ce qui vous convient",
+      cta: "Réserver sur WhatsApp",
       microcopy: "Sans abonnement • Sans engagement • Annulation libre • Que de bons cours",
       notes: [
         "✓ Réduction de 5 % pour un engagement de 3 mois",
         "✓ Réduction de 10 % pour un engagement de 6 mois",
         "✓ Tarifs de groupe sur devis, contactez-moi pour un accompagnement personnalisé",
       ],
-      cta: "On commence sur WhatsApp ?",
     },
     testimonials: {
-      title: "Ne me croyez pas sur parole",
+      title: "Mes élèves en parlent mieux que moi",
       subtitle: "De vrais élèves, de vrais progrès",
     },
     personal: {
       title: "Un peu sur moi",
       subtitle: "L'humaine derrière les cours",
+      cta: "Discutons ensemble !",
+      badgeTitle: "Langues",
+      badgeSubtitle: "ouvrent des mondes",
       p1: "Quand je n'enseigne pas, vous me trouverez le nez dans un bon livre, à comploter mon prochain voyage, ou à tester courageusement une recette trouvée sur internet (ça marche parfois 😄).",
       p2: "Je crois vraiment qu'apprendre une langue doit ressembler à une aventure, pas à une corvée. C'est pour ça que je garde une ambiance chaleureuse, fun et toujours humaine. Pas de jugement, pas de pression — juste des progrès.",
       p3: "Les langues ont changé ma vie. J'adorerais qu'elles changent la vôtre aussi.",
@@ -320,6 +335,9 @@ export const TRANSLATIONS = {
       title: "Prêt(e) à se lancer ? C'est parti ! 🚀",
       subtitle: "Envoyez-moi un message et on organise votre premier cours",
       whatsappCta: "Me contacter sur WhatsApp",
+      whatsappSubtitle: "Réponse la plus rapide — généralement en quelques heures",
+      trustTitle: "N'oubliez pas",
+      trustText: "Votre premier cours de 30 minutes est entièrement gratuit. Sans carte de crédit, sans engagement.",
       emailCta: "Ou envoyer un email",
       form: {
         name: "Votre prénom",
@@ -345,10 +363,11 @@ export const TRANSLATIONS = {
     },
     hero: {
       badge: "Profesora de Francés e Inglés",
-      headline: "¡Aprende francés o inglés online — y disfrútalo de verdad!",
+      headline: "¡Aprende francés o inglés online, y disfrútalo de verdad!",
       subheadline: "Clases divertidas, cercanas y muy efectivas. Tanto si empiezas desde cero como si quieres mejorar — estás exactamente donde debes estar.",
       cta1: "¡Quiero mi clase gratis! 🎉",
       cta2: "Saludarme en WhatsApp",
+      trialBadge: "Clase gratuita",
       trust: "Prueba gratis 30 min • Principiantes absolutos bienvenidos • Todos los niveles",
     },
     about: {
@@ -364,6 +383,8 @@ export const TRANSLATIONS = {
     lessons: {
       title: "¿En qué vamos a trabajar?",
       subtitle: "Elige tu idioma — ¡o los dos!",
+      ctaFrench: "Empezar francés →",
+      ctaEnglish: "Empezar inglés →",
       french: {
         tag: "🌟 ¿Empiezas desde cero? ¡Genial!",
         title: "Clases de francés",
@@ -408,13 +429,13 @@ export const TRANSLATIONS = {
     pricing: {
       title: "Precios simples y justos",
       subtitle: "Elige lo que te va mejor",
+      cta: "Reservar por WhatsApp",
       microcopy: "Sin suscripción • Sin compromiso • Cancela cuando quieras • Solo buenas clases",
       notes: [
         "✓ 5% de descuento por compromiso de 3 meses",
         "✓ 10% de descuento por compromiso de 6 meses",
         "✓ Tarifas de grupo bajo presupuesto, contáctame para un acompañamiento personalizado",
       ],
-      cta: "¿Empezamos en WhatsApp?",
     },
     testimonials: {
       title: "No te fíes solo de mi palabra",
@@ -423,6 +444,9 @@ export const TRANSLATIONS = {
     personal: {
       title: "Un poco sobre mí",
       subtitle: "La persona detrás de las clases",
+      cta: "¡Conectemos!",
+      badgeTitle: "Idiomas",
+      badgeSubtitle: "abren mundos",
       p1: "Cuando no estoy enseñando, me encontrarás leyendo un buen libro, planeando mi próxima aventura, o probando valientemente una receta nueva (a veces sale bien 😄).",
       p2: "Creo de verdad que aprender un idioma debería sentirse como una aventura, no como una obligación. Por eso mis clases son cálidas, divertidas y siempre muy humanas. Sin juicios, sin presión — solo progreso.",
       p3: "Los idiomas cambiaron mi vida. Me encantaría que cambiaran la tuya también.",
@@ -432,6 +456,9 @@ export const TRANSLATIONS = {
       title: "¿Lista/o para empezar? ¡Vamos! 🚀",
       subtitle: "Escríbeme y organizamos tu primera clase",
       whatsappCta: "Chatear conmigo en WhatsApp",
+      whatsappSubtitle: "Respuesta más rápida — normalmente en pocas horas",
+      trustTitle: "No olvides",
+      trustText: "Tu primera clase de 30 minutos es completamente gratis. Sin tarjeta de crédito, sin compromiso.",
       emailCta: "O enviarme un correo",
       form: {
         name: "Tu nombre",

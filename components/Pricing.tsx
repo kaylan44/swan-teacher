@@ -56,7 +56,7 @@ export default function Pricing() {
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full font-semibold text-sm bg-primary-600 text-white hover:bg-primary-700 transition-all duration-200"
                 >
-                  💬 Book on WhatsApp
+                  💬 {t.pricing.cta}
                 </a>
               </div>
             </FadeIn>
@@ -67,11 +67,11 @@ export default function Pricing() {
           <p className="text-center text-sm text-neutral-400 font-medium">
             {t.pricing.microcopy}
           </p>
-          <div className="mt-4 space-y-2 text-center text-sm text-neutral-500 italic">
+          <h2 className="text-center font-display text-xl lg:text-2xl font-bold text-neutral-900">
             {t.pricing.notes?.map((note, index) => (
               <p key={index}>{note}</p>
             ))}
-          </div>
+          </h2>
         </FadeIn>
       </div>
     </section>

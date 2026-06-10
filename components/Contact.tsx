@@ -72,7 +72,7 @@ export default function Contact() {
                   <p className="font-bold text-lg leading-tight">
                     {t.contact.whatsappCta}
                   </p>
-                  <p className="text-white/80 text-sm">Fastest response — usually within hours</p>
+                  <p className="text-white/80 text-sm">{t.contact.whatsappSubtitle}</p>
                 </div>
                 <span className="text-white/60 group-hover:translate-x-1 transition-transform text-xl">
                   →
@@ -101,10 +101,10 @@ export default function Contact() {
               {/* Trust signals */}
               <div className="bg-primary-50 rounded-2xl p-5 border border-primary-100">
                 <p className="text-primary-800 font-semibold text-sm mb-2">
-                  🎁 Don&apos;t forget
+                  🎁 {t.contact.trustTitle}
                 </p>
                 <p className="text-primary-700 text-sm">
-                  Your first 30-minute lesson is completely free. No credit card, no commitment.
+                  {t.contact.trustText}
                 </p>
               </div>
             </div>

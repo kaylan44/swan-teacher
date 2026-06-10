@@ -177,7 +177,7 @@ export default function Hero() {
                 className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg px-3 py-2 flex items-center gap-2"
               >
                 <span className="text-xl">✨</span>
-                <span className="text-xs font-semibold text-neutral-700">Free Trial</span>
+                <span className="text-xs font-semibold text-neutral-700">{t.hero.trialBadge}</span>
               </motion.div>
             </div>
           </motion.div>
