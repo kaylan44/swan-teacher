@@ -16,11 +16,19 @@ export default function Lessons() {
     <section id="lessons" className="section-pad bg-white">
       <div className="max-w-6xl mx-auto container-pad">
         <FadeIn>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="section-tag">{t.lessons.subtitle}</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-neutral-900">
               {t.lessons.title}
             </h2>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.05}>
+          <div className="flex justify-center mb-10">
+            <p className="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 text-primary-700 font-semibold text-base px-6 py-3 rounded-full">
+              {t.lessons.audienceBadge}
+            </p>
           </div>
         </FadeIn>
 
