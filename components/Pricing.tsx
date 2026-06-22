@@ -64,14 +64,31 @@ export default function Pricing() {
         </div>
 
         <FadeIn delay={0.25}>
-          <p className="text-center text-sm text-neutral-400 font-medium">
-            {t.pricing.microcopy}
-          </p>
-          <h2 className="text-center font-display text-xl lg:text-2xl font-bold text-neutral-900">
-            {t.pricing.notes?.map((note, index) => (
-              <p key={index}>{note}</p>
-            ))}
-          </h2>
+          <div className="bg-neutral-50 rounded-2xl p-6 mb-6">
+            <p className="font-display text-lg font-semibold text-neutral-800 mb-4">
+              {t.pricing.conditionsTitle}
+            </p>
+            <ul className="space-y-3">
+              {t.pricing.conditions?.map((condition, i) => (
+                <li key={i} className="text-sm text-neutral-600 leading-relaxed">
+                  {condition}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6">
+            <p className="font-display text-lg font-semibold text-neutral-800 mb-4">
+              {t.pricing.discountTitle}
+            </p>
+            <ul className="space-y-3">
+              {t.pricing.notes?.map((note, i) => (
+                <li key={i} className="text-sm text-neutral-600 leading-relaxed">
+                  {note}
+                </li>
+              ))}
+            </ul>
+          </div>
         </FadeIn>
       </div>
     </section>

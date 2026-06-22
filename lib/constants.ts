@@ -129,7 +129,7 @@ export const TRANSLATIONS = {
     lessons: {
       title: "What We'll Work On",
       subtitle: "Pick your language — or both!",
-      audienceBadge: "👨‍👩‍👧 Lessons for children, teenagers and adults",
+      audienceBadge: "🌍 For all ages: children, teenagers and adults",
       ctaFrench: "Start learning French →",
       ctaEnglish: "Start learning English →",
       french: {
@@ -182,7 +182,15 @@ export const TRANSLATIONS = {
       title: "Simple, Fair Pricing",
       subtitle: "Pick what works for you",
       cta: "Book on WhatsApp",
-      microcopy: "No subscription • Easy schedule changes up to 12h before • Free cancellation up to 24h before the lesson • Discounts available with commitment",
+      conditionsTitle: "🤝 Flexible and trust-based approach",
+      conditions: [
+        "✓ No subscription required",
+        "✓ Commitment options available with discounts",
+        "✓ Schedule changes are easy when requested with enough notice",
+        "✓ Lessons can be rescheduled in the event of an unexpected situation, within reason",
+        "✓ Every booked lesson is guaranteed, and a solution is always found if something comes up",
+      ],
+      discountTitle: "✨ Discounts available with commitment",
       notes: [
         "✓ 5% discount for a 3-month commitment (minimum 2 x 40-minute lessons per week or 1 x 60-minute lesson per week)",
         "✓ 10% discount for a 6-month commitment (minimum 2 x 40-minute lessons per week or 1 x 60-minute lesson per week)",
@@ -257,7 +265,7 @@ export const TRANSLATIONS = {
     lessons: {
       title: "Comment se déroulent les cours ?",
       subtitle: "Choisissez votre langue — ou les deux !",
-      audienceBadge: "👨‍👩‍👧 Cours adaptés aux enfants, adolescents et adultes",
+      audienceBadge: "🌍 Pour tous les âges : enfants, adolescents et adultes",
       ctaFrench: "Commencer le français →",
       ctaEnglish: "Commencer l'anglais →",
       french: {
@@ -310,7 +318,15 @@ export const TRANSLATIONS = {
       title: "Des cours personnalisés, avec des tarifs clairs et sans surprise.",
       subtitle: "Choisissez ce qui vous convient",
       cta: "Réserver sur WhatsApp",
-      microcopy: "Sans abonnement • Modification d'horaire facile sous 12h • Annulation gratuite jusqu'à 24h avant le cours • Réductions possibles avec engagement",
+      conditionsTitle: "🤝 Fonctionnement flexible et basé sur la confiance",
+      conditions: [
+        "✓ Sans abonnement obligatoire",
+        "✓ Engagement possible avec réductions",
+        "✓ Modification d'horaire facilitée lorsqu'elle est demandée suffisamment à l'avance",
+        "✓ Les cours peuvent être reportés en cas d'imprévu lorsque cela reste raisonnable",
+        "✓ Chaque cours réservé est assuré et une solution est toujours recherchée en cas d'empêchement",
+      ],
+      discountTitle: "✨ Réductions possibles avec engagement",
       notes: [
         "✓ Réduction de 5 % pour un engagement de 3 mois (minimum 2 cours de 40 minutes par semaine ou 1 cours d'une heure par semaine)",
         "✓ Réduction de 10 % pour un engagement de 6 mois (minimum 2 cours de 40 minutes par semaine ou 1 cours d'une heure par semaine)",
@@ -385,9 +401,9 @@ export const TRANSLATIONS = {
     lessons: {
       title: "¿Cómo se desarrollan las clases?",
       subtitle: "Elige tu idioma — ¡o los dos!",
-      audienceBadge: "👨‍👩‍👧 Clases adaptadas para niños, adolescentes y adultos",
-      ctaFrench: "Empezar francés →",
-      ctaEnglish: "Empezar inglés →",
+      audienceBadge: "🌍 Para todas las edades: niños, adolescentes y adultos",
+      ctaFrench: "Empezar el francés →",
+      ctaEnglish: "Empezar el inglés →",
       french: {
         tag: "🌟 ¿Empiezas desde cero? ¡Genial!",
         title: "Clases de francés",
@@ -433,7 +449,15 @@ export const TRANSLATIONS = {
       title: "Precios simples y justos",
       subtitle: "Elige lo que te va mejor",
       cta: "Reservar por WhatsApp",
-      microcopy: "Sin suscripción • Cambios de horario fáciles hasta 12h antes • Cancelación gratuita hasta 24h antes del curso • Descuentos posibles con compromiso",
+      conditionsTitle: "🤝 Un enfoque flexible y basado en la confianza",
+      conditions: [
+        "✓ Sin suscripción obligatoria",
+        "✓ Posibilidad de compromiso con descuentos",
+        "✓ Los cambios de horario son fáciles si se solicitan con suficiente antelación",
+        "✓ Las clases pueden posponerse ante imprevistos, dentro de lo razonable",
+        "✓ Cada clase reservada está garantizada y siempre se busca una solución si surge algún contratiempo",
+      ],
+      discountTitle: "✨ Descuentos posibles con compromiso",
       notes: [
         "✓ 5% de descuento por compromiso de 3 meses (mínimo 2 clases de 40 minutos por semana o 1 clase de una hora por semana)",
         "✓ 10% de descuento por compromiso de 6 meses (mínimo 2 clases de 40 minutos por semana o 1 clase de una hora por semana)",
