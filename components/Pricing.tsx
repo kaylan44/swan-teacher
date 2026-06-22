@@ -77,13 +77,13 @@ export default function Pricing() {
             </ul>
           </div>
 
-          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6">
-            <p className="font-display text-lg font-semibold text-neutral-800 mb-4">
+          <div className="bg-amber-50 border border-amber-100 rounded-2xl px-8 py-10 mt-2">
+            <p className="font-display text-2xl font-bold text-neutral-800 mb-7 tracking-tight">
               {t.pricing.discountTitle}
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-5">
               {t.pricing.notes?.map((note, i) => (
-                <li key={i} className="text-sm text-neutral-600 leading-relaxed">
+                <li key={i} className="text-base text-neutral-600 leading-relaxed">
                   {note}
                 </li>
               ))}
