@@ -151,7 +151,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="font-semibold text-neutral-900 text-sm">Swan</p>
-                    <p className="text-xs text-neutral-500">Certified FLE Teacher</p>
+                    <p className="text-xs text-neutral-500">{t.hero.fleOverlay}</p>
                   </div>
                   <div className="ml-auto flex">
                     {[1, 2, 3, 4, 5].map((s) => (
@@ -169,7 +169,7 @@ export default function Hero() {
                 className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-lg px-3 py-2 flex items-center gap-2"
               >
                 <span className="text-xl">🎓</span>
-                <span className="text-xs font-semibold text-neutral-700">FLE Certified</span>
+                <span className="text-xs font-semibold text-neutral-700">{t.hero.fleBadge}</span>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 8, 0] }}
