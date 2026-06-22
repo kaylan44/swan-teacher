@@ -204,9 +204,9 @@ export default function About() {
               {/* Decorative */}
               <div className="absolute -bottom-3 -right-3 lg:-right-6 bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center gap-1">
                 <span className="text-3xl">🇫🇷</span>
-                <span className="text-xs font-bold text-neutral-700">French</span>
+                <span className="text-xs font-bold text-neutral-700">{t.about.frenchLabel}</span>
                 <span className="text-2xl">🇬🇧</span>
-                <span className="text-xs font-bold text-neutral-700">English</span>
+                <span className="text-xs font-bold text-neutral-700">{t.about.englishLabel}</span>
               </div>
             </div>
           </FadeIn>

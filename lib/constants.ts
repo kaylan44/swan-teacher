@@ -27,7 +27,7 @@ export const CREDENTIALS = [
     desc: {
       en: "Master’s degree in Teaching, Education and Training (MEEF) – Teaching experience with children, teenagers, and adults in France and internationally",
       fr: "Master MEEF - Expérience de l'enseignement auprès d'enfants, d'adolescents et d'adultes, en France et à l'international",
-      es: "Maestra certificada de escuela primaria en Francia, formada en pedagogía",
+      es: "Máster MEEF — Experiencia docente con niños, adolescentes y adultos, en Francia y a nivel internacional",
     },
   },
   {
@@ -126,6 +126,8 @@ export const TRANSLATIONS = {
       subtitle: "Your French & English teacher",
       p1: "I'm a certified teacher from France who genuinely loves what she does. After years in French primary schools and high schools, I decided to bring that same energy online — helping people all over the world fall in love with French (and English!).",
       p2: "Never studied a language before? Perfect. Already have some basics? Let's take it further. Whatever your starting point, I'll build a fun, personalised path just for you. No boring textbooks, I promise.",
+      frenchLabel: "French",
+      englishLabel: "English",
     },
     credentials: {
       title: "My Qualifications",
@@ -267,6 +269,8 @@ export const TRANSLATIONS = {
       subtitle: "Votre professeure de français et d'anglais",
       p1: "Je suis professeure certifiée et j'adore ce que je fais. Après des années dans les écoles primaires et lycées français, j'ai décidé d'apporter cette même énergie en ligne — pour aider des gens du monde entier à tomber amoureux du français (et de l'anglais !).",
       p2: "Vous n'avez jamais étudié une langue étrangère ? Parfait, on part de zéro ensemble. Vous avez déjà quelques bases ? On va aller plus loin. Quel que soit votre point de départ, je construis un parcours fun et personnalisé rien que pour vous. Promis, pas de manuel ennuyeux.",
+      frenchLabel: "Français",
+      englishLabel: "Anglais",
     },
     credentials: {
       title: "Mes qualifications",
@@ -408,6 +412,8 @@ export const TRANSLATIONS = {
       subtitle: "Tu profesora de francés e inglés",
       p1: "Soy maestra certificada de Francia y me encanta lo que hago. Tras años enseñando en escuelas primarias y secundarias francesas, decidí llevar esa misma energía a internet — para ayudar a personas de todo el mundo a enamorarse del francés (¡y del inglés!).",
       p2: "¿Nunca has estudiado un idioma extranjero? Perfecto, empezamos juntos desde cero. ¿Ya tienes algunas bases? Las aprovechamos y vamos más lejos. Sea cual sea tu punto de partida, creo un camino divertido y personalizado solo para ti. Sin manuales aburridos, lo prometo.",
+      frenchLabel: "Francés",
+      englishLabel: "Inglés",
     },
     credentials: {
       title: "Mis calificaciones",
@@ -424,11 +430,14 @@ export const TRANSLATIONS = {
         title: "Clases de francés",
         for: "Para angloparlantes e hispanohablantes",
         points: [
-          "¿Sin experiencia previa? ¡No hay problema — empezamos desde el principio!",
-          "Gana confianza hablando desde el primer día",
-          "Gramática fácil y (de verdad) divertida",
-          "Avanza a tu ritmo, sin presión",
-          "Metodología certificada FLE",
+          "¿Principiante absoluto? Estás en el lugar adecuado 🙌",
+          "Conversación y pronunciación desde las primeras clases",
+          "Gramática, vocabulario y comprensión explicados de forma clara y accesible",
+          "Clases adaptadas para niños, adolescentes y adultos",
+          "Francés del día a día, para viajar, estudiar o trabajar",
+          "Acompañamiento desde el nivel principiante hasta los niveles avanzados",
+          "Metodología basada en mi experiencia en Francés Lengua Extranjera (FLE)",
+          "Clases personalizadas, progresivas y motivadoras",
         ],
       },
       english: {
@@ -437,10 +446,12 @@ export const TRANSLATIONS = {
         tag: "🌟 ¿Nunca estudiaste inglés? ¡Genial!",
         points: [
           "¿Principiante total? Eres muy bienvenido/a aquí 🙌",
-          "Conversación y pronunciación desde el primer día",
-          "Inglés profesional o cotidiano — tú decides",
-          "Preparación para exámenes (IELTS, TOEFL) o simplemente ganar confianza",
-          "Flexible, progresivo y sin estrés",
+          "Conversación y pronunciación desde las primeras clases",
+          "Aprendizaje progresivo del vocabulario y la gramática",
+          "Inglés del día a día, para viajar, estudiar o trabajar",
+          "Clases adaptadas para niños, adolescentes y adultos",
+          "Acompañamiento desde el nivel principiante hasta el nivel intermedio (B1)",
+          "Progresión a tu ritmo, en un ambiente de apoyo y sin estrés",
         ],
       },
       footer: [
@@ -495,7 +506,7 @@ export const TRANSLATIONS = {
       hobbies: ["📚 Lectura", "✈️ Viajes", "🎨 Arte", "🎵 Música", "🍳 Cocina", "🌿 Naturaleza"],
     },
     contact: {
-      title: "¿Lista/o para empezar? ¡Vamos! 🚀",
+      title: "¿Listo/a para empezar? ¡Vamos! 🚀",
       subtitle: "Escríbeme y organizamos tu primera clase",
       whatsappCta: "Chatear conmigo en WhatsApp",
       whatsappSubtitle: "Respuesta más rápida — normalmente en pocas horas",
