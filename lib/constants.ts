@@ -115,6 +115,8 @@ export const TRANSLATIONS = {
       cta2: "Say hi on WhatsApp",
       trialBadge: "Free Trial",
       trust: "30-min free trial • Total beginners welcome • All levels",
+      fleBadge: "FLE Certified",
+      fleOverlay: "Certified FLE Teacher",
     },
     about: {
       title: "Hey, I'm Swan! 👋",
@@ -251,6 +253,8 @@ export const TRANSLATIONS = {
       cta2: "Contact sur WhatsApp",
       trialBadge: "Essai gratuit",
       trust: "Essai gratuit 30 min • Grands débutants bienvenus • Tous niveaux",
+      fleBadge: "Certifiée FLE",
+      fleOverlay: "Professeure certifiée FLE",
     },
     about: {
       title: "Bonjour, moi c'est Swan ! 👋",
@@ -387,6 +391,8 @@ export const TRANSLATIONS = {
       cta2: "Saludarme en WhatsApp",
       trialBadge: "Clase gratuita",
       trust: "Prueba gratis 30 min • Principiantes absolutos bienvenidos • Todos los niveles",
+      fleBadge: "Certificada FLE",
+      fleOverlay: "Profesora certificada FLE",
     },
     about: {
       title: "¡Hola! Soy Swan 👋",
