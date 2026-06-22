@@ -216,7 +216,7 @@ export default function About() {
             <div>
               <p className="section-tag">{t.about.subtitle}</p>
               <h2 className="font-display text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
-                {t.about.title} 👋
+                {t.about.title}
               </h2>
               {contentBlocks ? (
                 renderPortableText(contentBlocks)

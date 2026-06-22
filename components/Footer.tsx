@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="bg-primary-600 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="font-display text-3xl font-bold text-white mb-3">
-            Ready to start your language journey?
+            {t.footer.ctaBand}
           </h3>
           <p className="mb-6 text-primary-200">{t.hero.trust}</p>
           <a
