@@ -91,7 +91,7 @@ export default function Lessons() {
                     <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-primary-50 rounded-full flex items-center justify-center text-primary-600 text-xs">
                       ✓
                     </span>
-                    <span className="text-sm text-neutral-600 leading-relaxed">{point}</span>
+                    <span className={`text-sm text-neutral-600 leading-relaxed${i === 0 ? " font-bold" : ""}`}>{point}</span>
                   </li>
                 ))}
               </ul>
