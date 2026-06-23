@@ -56,7 +56,7 @@ export default function Lessons() {
                       <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-white/20 rounded-full flex items-center justify-center text-xs">
                         ✓
                       </span>
-                      <span className="text-sm leading-relaxed">{point}</span>
+                      <span className={`text-sm leading-relaxed${i === 0 ? " font-bold" : ""}`}>{point}</span>
                     </li>
                   ))}
                 </ul>
