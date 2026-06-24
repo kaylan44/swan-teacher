@@ -39,7 +39,7 @@ export default function Pricing() {
             <FadeIn key={i} delay={i * 0.12}>
               <div className="card border-2 hover:border-primary-100 rounded-3xl p-8 text-center h-full transition-all duration-300 hover:-translate-y-1">
                 <p className="text-sm font-semibold uppercase tracking-wide mb-2 text-neutral-400">
-                  {plan.description}
+                  {plan.duration.includes("60") ? t.pricing.fullLesson : t.pricing.focusedLesson}
                 </p>
                 <div className="mb-2">
                   <span className="font-display text-6xl font-bold text-neutral-900">
