@@ -233,11 +233,7 @@ export default function About() {
 
               {/* Quick stats */}
               <div className="grid grid-cols-3 gap-4 mb-8 p-5 bg-neutral-50 rounded-2xl">
-                {[
-                  { num: "100+", label: "Students" },
-                  { num: "5+", label: "Years exp." },
-                  { num: "30", label: "Min free trial" },
-                ].map(({ num, label }) => (
+                {t.about.stats.map(({ num, label }) => (
                   <div key={label} className="text-center">
                     <p className="font-display font-bold text-2xl text-primary-600">{num}</p>
                     <p className="text-xs text-neutral-500 font-medium">{label}</p>

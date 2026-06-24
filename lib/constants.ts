@@ -11,12 +11,12 @@ export const PRICING = [
   {
     duration: "60 min",
     price: "40€",
-    description: "Cours complet",
+    description: "Full Lesson",
   },
   {
     duration: "40 min",
     price: "28€",
-    description: "Cours ciblé",
+    description: "Focused Lesson",
   },
 ];
 
@@ -106,7 +106,7 @@ export const TRANSLATIONS = {
       trial: "Free Trial",
       pricing: "Pricing",
       testimonials: "Reviews",
-      personal: "My Journey",
+      personal: "My Background",
       contact: "Contact",
       cta: "Free Trial",
     },
@@ -128,6 +128,11 @@ export const TRANSLATIONS = {
       p2: "Never studied a language before? Perfect. Already have some basics? Let's take it further. Whatever your starting point, I'll build a fun, personalised path just for you. No boring textbooks, I promise.",
       frenchLabel: "French",
       englishLabel: "English",
+      stats: [
+        { num: "100+", label: "Students" },
+        { num: "7+", label: "Years exp." },
+        { num: "30", label: "Min free trial" },
+      ],
     },
     credentials: {
       title: "My Qualifications",
@@ -135,7 +140,7 @@ export const TRANSLATIONS = {
     },
     lessons: {
       title: "What We'll Work On",
-      subtitle: "Pick your language — or both!",
+      subtitle: "Choose one language — or both!",
       audienceBadge: "🌍 For all ages: children, teenagers and adults",
       ctaFrench: "Start learning French →",
       ctaEnglish: "Start learning English →",
@@ -178,7 +183,7 @@ export const TRANSLATIONS = {
     trial: {
       tag: "Book your free trial lesson",
       title: "Your first lesson is completely free",
-      subtitle: "30 minutes, zero pressure, zero commitment",
+      subtitle: "A free 30-minute session. No pressure, no commitment.",
       includes: [
         { icon: "💬", text: "We chat, get to know each other & talk about your goals" },
         { icon: "📊", text: "We assess your level together, in a relaxed and supportive way." },
@@ -198,20 +203,23 @@ export const TRANSLATIONS = {
         "✓ In case of an unexpected situation, a rescheduling solution is generally proposed where possible",
         "✓ A relationship built on trust, mutual respect and straightforward communication",
       ],
-      discountTitle: "✨ Discounts available with commitment",
+      discountTitle: "✨ Choose your plan",
       notes: [
-        "✓ 5% discount for a 3-month commitment (minimum 2 x 40-minute lessons per week or 1 x 60-minute lesson per week)",
-        "✓ 10% discount for a 6-month commitment (minimum 2 x 40-minute lessons per week or 1 x 60-minute lesson per week)",
-        "✓ Group pricing by quote, contact me for personalized support",
+        "✨ Flexible Plan — Private online lessons with no minimum-term commitment.",
+        "✨ 3-Month Commitment Plan — 5% discount with a 3-month commitment. Minimum: 2 lessons of 40 minutes per week or 1 lesson of 60 minutes per week.",
+        "✨ 6-Month Commitment Plan — 10% discount with a 6-month commitment. Minimum: 2 lessons of 40 minutes per week or 1 lesson of 60 minutes per week.",
+        "👥 Group Lessons — Rates available on request for couples, families, or small groups. Contact me for a personalised learning plan.",
       ],
+      fullLesson: "Full Lesson",
+      focusedLesson: "Focused Lesson",
     },
     testimonials: {
       title: "Don't Just Take My Word For It",
       subtitle: "Measurable progress, at your own pace",
     },
     personal: {
-      title: "My Journey",
-      subtitle: "Your teacher",
+      title: "My Background",
+      subtitle: "A teacher attentive to your needs",
       cta: "Let's connect!",
       badgeTitle: "Languages",
       badgeSubtitle: "open worlds",
@@ -272,6 +280,11 @@ export const TRANSLATIONS = {
       p2: "Vous n'avez jamais étudié une langue étrangère ? Parfait, on part de zéro ensemble. Vous avez déjà quelques bases ? On va aller plus loin. Quel que soit votre point de départ, je construis un parcours fun et personnalisé rien que pour vous. Promis, pas de manuel ennuyeux.",
       frenchLabel: "Français",
       englishLabel: "Anglais",
+      stats: [
+        { num: "100+", label: "Élèves" },
+        { num: "7+", label: "Ans d'expérience" },
+        { num: "30", label: "Min de cours d'essai gratuit" },
+      ],
     },
     credentials: {
       title: "Mes qualifications",
@@ -322,7 +335,7 @@ export const TRANSLATIONS = {
     trial: {
       tag: "Réservez votre cours d'essai gratuit",
       title: "Votre premier cours est offert",
-      subtitle: "30 minutes, zéro pression, zéro engagement",
+      subtitle: "Une séance gratuite de 30 minutes. Sans pression, sans engagement.",
       includes: [
         { icon: "💬", text: "On fait connaissance et on parle de vos objectifs" },
         { icon: "📊", text: "Nous évaluons votre niveau ensemble, sans test ni pression." },
@@ -342,12 +355,15 @@ export const TRANSLATIONS = {
         "✓ En cas d'imprévu, une solution de report est généralement proposée dans la mesure du possible",
         "✓ Une relation basée sur la confiance, le respect mutuel et une communication simple",
       ],
-      discountTitle: "✨ Réductions possibles avec engagement",
+      discountTitle: "✨ Choisissez votre formule",
       notes: [
-        "✓ Réduction de 5 % pour un engagement de 3 mois (minimum 2 cours de 40 minutes par semaine ou 1 cours d'une heure par semaine)",
-        "✓ Réduction de 10 % pour un engagement de 6 mois (minimum 2 cours de 40 minutes par semaine ou 1 cours d'une heure par semaine)",
-        "✓ Tarifs de groupe sur devis, contactez-moi pour un accompagnement personnalisé",
+        "✨ Formule flexible — Cours particuliers en ligne sans engagement de durée.",
+        "✨ Formule avec engagement de 3 mois — Réduction de 5 % pour un engagement de 3 mois. Minimum : 2 cours de 40 minutes par semaine ou 1 cours d'une heure par semaine.",
+        "✨ Formule avec engagement de 6 mois — Réduction de 10 % pour un engagement de 6 mois. Minimum : 2 cours de 40 minutes par semaine ou 1 cours d'une heure par semaine.",
+        "👥 Tarifs de groupe — Tarifs sur devis pour les couples, familles ou petits groupes. Contactez-moi pour un accompagnement personnalisé.",
       ],
+      fullLesson: "Cours complet",
+      focusedLesson: "Cours ciblé",
     },
     testimonials: {
       title: "Mes élèves en parlent mieux que moi",
@@ -416,6 +432,11 @@ export const TRANSLATIONS = {
       p2: "¿Nunca has estudiado un idioma extranjero? Perfecto, empezamos juntos desde cero. ¿Ya tienes algunas bases? Las aprovechamos y vamos más lejos. Sea cual sea tu punto de partida, creo un camino divertido y personalizado solo para ti. Sin manuales aburridos, lo prometo.",
       frenchLabel: "Francés",
       englishLabel: "Inglés",
+      stats: [
+        { num: "100+", label: "Estudiantes" },
+        { num: "7+", label: "Años de experiencia" },
+        { num: "30", label: "Min de clase de prueba gratuita" },
+      ],
     },
     credentials: {
       title: "Mis calificaciones",
@@ -466,7 +487,7 @@ export const TRANSLATIONS = {
     trial: {
       tag: "Reserva tu clase de prueba gratuita",
       title: "Tu primera clase es completamente gratis",
-      subtitle: "30 minutos, cero presión, cero compromiso",
+      subtitle: "Una sesión gratuita de 30 minutos. Sin presión, sin compromiso.",
       includes: [
         { icon: "💬", text: "Nos conocemos y hablamos de tus objetivos" },
         { icon: "📊", text: "Evaluamos juntos tu nivel, de forma tranquila y sin presión." },
@@ -486,12 +507,15 @@ export const TRANSLATIONS = {
         "✓ En caso de imprevisto, se propone generalmente una solución de aplazamiento en la medida de lo posible",
         "✓ Una relación basada en la confianza, el respeto mutuo y una comunicación sencilla",
       ],
-      discountTitle: "✨ Descuentos posibles con compromiso",
+      discountTitle: "✨ Elige tu modalidad",
       notes: [
-        "✓ 5% de descuento por compromiso de 3 meses (mínimo 2 clases de 40 minutos por semana o 1 clase de una hora por semana)",
-        "✓ 10% de descuento por compromiso de 6 meses (mínimo 2 clases de 40 minutos por semana o 1 clase de una hora por semana)",
-        "✓ Tarifas de grupo bajo presupuesto, contáctame para un acompañamiento personalizado",
+        "✨ Plan flexible — Clases particulares en línea sin compromiso de duración.",
+        "✨ Plan de compromiso de 3 meses — 5 % de descuento con un compromiso de 3 meses. Mínimo: 2 clases de 40 minutos por semana o 1 clase de una hora por semana.",
+        "✨ Plan de compromiso de 6 meses — 10 % de descuento con un compromiso de 6 meses. Mínimo: 2 clases de 40 minutos por semana o 1 clase de una hora por semana.",
+        "👥 Clases en grupo — Tarifas bajo presupuesto para parejas, familias o grupos pequeños. Contáctame para un plan de aprendizaje personalizado.",
       ],
+      fullLesson: "Lección completa",
+      focusedLesson: "Lección específica",
     },
     testimonials: {
       title: "No te fíes solo de mi palabra",
@@ -499,7 +523,7 @@ export const TRANSLATIONS = {
     },
     personal: {
       title: "Mi trayectoria",
-      subtitle: "Tu profesora",
+      subtitle: "Una profesora atenta a tus necesidades",
       cta: "¡Conectemos!",
       badgeTitle: "Los idiomas",
       badgeSubtitle: "abren mundos",
