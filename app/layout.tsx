@@ -49,7 +49,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const important = await client.fetch(
-    '*[_type == "importantData" && identifier == "site-info"][0]{contactEmail,whatsappNumber,price40,price60}'
+    '*[_type == "importantData" && identifier == "site-info"][0]{contactEmail,whatsappNumber,price40,price60}',
+    {},
+    { next: { revalidate: 60 } }
   );
 
   return (
