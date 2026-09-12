@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { SiteDataProvider } from "@/lib/SiteDataContext";
 import { client } from "@/sanity/lib/client";
@@ -64,6 +65,7 @@ export default async function RootLayout({
           <LanguageProvider>{children}</LanguageProvider>
         </SiteDataProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
