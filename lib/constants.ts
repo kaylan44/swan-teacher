@@ -150,7 +150,7 @@ export const TRANSLATIONS = {
         for: "For English & Spanish speakers",
         points: [
           "🎒 Lessons adapted for children, teenagers and adults",
-          "🏫 School support available following the French national curriculum, from nursery to Year 6 (homework help, tutoring and learning reinforcement)",
+          "🏫 School support available following the French national curriculum, from nursery to secondary school (homework help, tutoring and learning reinforcement)",
           "Complete beginner? You are in the right place 🙌",
           "Conversation and pronunciation from the very first lessons",
           "Grammar, vocabulary, and comprehension explained in a clear and accessible way",
@@ -302,7 +302,7 @@ export const TRANSLATIONS = {
         for: "Pour anglophones et hispanophones",
         points: [
           "🎒 Cours adaptés aux enfants, adolescents et adultes",
-          "🏫 Possibilité d'accompagnement scolaire selon le programme français, de la maternelle au CM2 (aide aux devoirs, soutien scolaire et renforcement des apprentissages)",
+          "🏫 Possibilité d'accompagnement scolaire selon le programme français, de la maternelle au collège (aide aux devoirs, soutien scolaire et renforcement des apprentissages)",
           "Débutant complet ? Vous êtes au bon endroit 🙌",
           "Conversation et prononciation dès les premières leçons",
           "Grammaire, vocabulaire et compréhension expliqués de façon claire et accessible",
@@ -454,7 +454,7 @@ export const TRANSLATIONS = {
         for: "Para angloparlantes e hispanohablantes",
         points: [
           "🎒 Clases adaptadas para niños, adolescentes y adultos",
-          "🏫 Posibilidad de apoyo escolar siguiendo el programa nacional francés, desde infantil hasta 5.º de primaria (ayuda con deberes, refuerzo y consolidación de aprendizajes)",
+          "🏫 Posibilidad de apoyo escolar siguiendo el programa nacional francés, desde infantil hasta secundaria (ayuda con deberes, refuerzo y consolidación de aprendizajes)",
           "¿Principiante absoluto? Estás en el lugar adecuado 🙌",
           "Conversación y pronunciación desde las primeras clases",
           "Gramática, vocabulario y comprensión explicados de forma clara y accesible",
