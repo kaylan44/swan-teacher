@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK, WHATSAPP_MESSAGE, EMAIL } from "@/lib/constants";
+import { trackWhatsApp } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 
 export default function Footer() {
@@ -35,6 +36,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-primary-700 font-bold px-8 py-3.5 rounded-full hover:bg-primary-50 transition-colors shadow-lg text-base"
+            onClick={() => trackWhatsApp("footer_cta_band")}
           >
             🎉 {t.nav.cta}
           </a>
@@ -58,6 +60,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
+                onClick={() => trackWhatsApp("footer_icon")}
                 className="w-9 h-9 bg-neutral-800 hover:bg-[#25D366] rounded-lg flex items-center justify-center transition-colors"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-neutral-400 hover:text-white">
@@ -85,6 +88,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-2"
+                  onClick={() => trackWhatsApp("footer_link")}
                 >
                   💬 WhatsApp
                 </a>

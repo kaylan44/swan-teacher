@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState, type ReactNode } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { trackWhatsApp } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
@@ -246,6 +247,7 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
+                onClick={() => trackWhatsApp("about")}
               >
                 💬 {t.nav.cta}
               </a>

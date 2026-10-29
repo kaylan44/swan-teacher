@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { trackFreeTrial } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
@@ -45,6 +46,7 @@ export default function Trial() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary text-base px-8 py-4 text-lg"
+            onClick={() => trackFreeTrial("trial_section")}
           >
             🎉 {t.trial.cta}
           </a>

@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import { PRICING, WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { trackWhatsApp } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
@@ -55,6 +56,7 @@ export default function Pricing() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full font-semibold text-sm bg-primary-600 text-white hover:bg-primary-700 transition-all duration-200"
+                  onClick={() => trackWhatsApp(`pricing_${plan.duration}`)}
                 >
                   💬 {t.pricing.cta}
                 </a>
