@@ -47,10 +47,10 @@ export default function Contact() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="flex justify-center">
           {/* WhatsApp + Email side */}
           <FadeIn direction="left" delay={0.1}>
-            <div className="space-y-4 h-full flex flex-col justify-center">
+            <div className="space-y-4 h-full flex flex-col justify-center w-full max-w-lg">
               {/* WhatsApp primary CTA */}
               <a
                 href={whatsappLink}
