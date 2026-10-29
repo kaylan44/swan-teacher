@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { trackWhatsApp } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 
 export default function WhatsAppButton() {
@@ -53,6 +54,7 @@ export default function WhatsAppButton() {
             aria-label="Chat with Swan on WhatsApp"
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
+            onClick={() => trackWhatsApp("floating_button")}
             className="whatsapp-pulse w-14 h-14 bg-[#25D366] hover:bg-[#1ebe5c] rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-110 active:scale-95"
           >
             <svg

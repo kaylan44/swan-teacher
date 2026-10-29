@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { SiteDataProvider } from "@/lib/SiteDataContext";
 import { client } from "@/sanity/lib/client";
@@ -93,6 +94,18 @@ export default async function RootLayout({
           <LanguageProvider>{children}</LanguageProvider>
         </SiteDataProvider>
         <Analytics />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VE9E1BNYXR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VE9E1BNYXR');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
