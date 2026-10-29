@@ -21,9 +21,9 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.swanlessons.com"),
-  title: "Swan — French & English Teacher | Online Lessons",
+  title: "Online French & English Lessons | Swan — Free Trial",
   description:
-    "Learn French or English online with Swan, a certified French teacher with FLE specialization. Fun, personalized lessons for all levels. Book a free 30-minute trial today!",
+    "Free trial lesson with Swan — certified French & English teacher. Personalized, fun lessons for all levels (A1 to C1). Book your 30-min trial today!",
   keywords: [
     "French teacher",
     "English teacher",
@@ -98,23 +98,28 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Swan",
-              jobTitle: "French & English Teacher",
+              "@type": "Service",
+              name: "Online French & English Lessons",
               description:
-                "Certified French teacher with FLE specialization offering personalized online lessons for all levels.",
+                "Personalized online French and English lessons for all levels (A1 to C1). Free 30-minute trial available.",
               url: "https://www.swanlessons.com",
+              provider: {
+                "@type": "Person",
+                name: "Swan",
+                jobTitle: "French & English Teacher",
+                url: "https://www.swanlessons.com",
+              },
               offers: [
                 {
                   "@type": "Offer",
-                  name: "Online French or English lesson — 60 min",
+                  name: "Online lesson — 60 min",
                   price: "40",
                   priceCurrency: "EUR",
                   availability: "https://schema.org/InStock",
                 },
                 {
                   "@type": "Offer",
-                  name: "Online French or English lesson — 40 min",
+                  name: "Online lesson — 40 min",
                   price: "28",
                   priceCurrency: "EUR",
                   availability: "https://schema.org/InStock",
