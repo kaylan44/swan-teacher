@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -20,10 +20,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.swanlessons.com"),
-  title: "Online French & English Lessons | Swan — Free Trial",
+  metadataBase: new URL("https://swanlessons.com"),
+  title: "Online French & English Lessons | Swan â€” Free Trial",
   description:
-    "Free trial lesson with Swan — certified French & English teacher. Personalized, fun lessons for all levels (A1 to C1). Book your 30-min trial today!",
+    "Free trial lesson with Swan â€” certified French & English teacher. Personalized, fun lessons for all levels (A1 to C1). Book your 30-min trial today!",
   keywords: [
     "French teacher",
     "English teacher",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "online English lessons",
     "learn French online",
     "learn English online",
-    "cours de français en ligne",
+    "cours de franÃ§ais en ligne",
     "cours d'anglais en ligne",
     "professeur FLE",
     "French tutor",
@@ -42,20 +42,20 @@ export const metadata: Metadata = {
     "free trial French lesson",
   ],
   alternates: {
-    canonical: "https://www.swanlessons.com",
+    canonical: "https://swanlessons.com",
   },
   openGraph: {
-    title: "Swan — French & English Teacher",
+    title: "Swan â€” French & English Teacher",
     description:
       "Certified French teacher offering personalized online lessons for all levels. Free 30-min trial!",
-    url: "https://www.swanlessons.com",
-    siteName: "Swan Lessons",
+    url: "https://swanlessons.com",
+    siteName: "Swan Lessons - French Online Teacher",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Swan — French & English Teacher | Online Lessons",
+        alt: "Swan â€” French & English Teacher | Online Lessons",
       },
     ],
     locale: "en_US",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Swan — French & English Teacher",
+    title: "Swan â€” French & English Teacher",
     description:
       "Certified French teacher offering personalized online lessons for all levels. Free 30-min trial!",
     images: ["/og-image.jpg"],
@@ -103,8 +103,8 @@ export default async function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Swan Lessons",
-              url: "https://www.swanlessons.com",
+              name: "Swan Lessons - French Online Teacher",
+              url: "https://swanlessons.com",
             }),
           }}
         />
@@ -117,24 +117,24 @@ export default async function RootLayout({
               name: "Online French & English Lessons",
               description:
                 "Personalized online French and English lessons for all levels (A1 to C1). Free 30-minute trial available.",
-              url: "https://www.swanlessons.com",
+              url: "https://swanlessons.com",
               provider: {
                 "@type": "Person",
                 name: "Swan",
                 jobTitle: "French & English Teacher",
-                url: "https://www.swanlessons.com",
+                url: "https://swanlessons.com",
               },
               offers: [
                 {
                   "@type": "Offer",
-                  name: "Online lesson — 60 min",
+                  name: "Online lesson â€” 60 min",
                   price: "40",
                   priceCurrency: "EUR",
                   availability: "https://schema.org/InStock",
                 },
                 {
                   "@type": "Offer",
-                  name: "Online lesson — 40 min",
+                  name: "Online lesson â€” 40 min",
                   price: "28",
                   priceCurrency: "EUR",
                   availability: "https://schema.org/InStock",
@@ -147,3 +147,5 @@ export default async function RootLayout({
     </html>
   );
 }
+
+
