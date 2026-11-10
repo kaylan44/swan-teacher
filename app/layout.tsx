@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.swanlessons.com"),
+  metadataBase: new URL("https://swanlessons.com"),
   title: "Online French & English Lessons | Swan — Free Trial",
   description:
     "Free trial lesson with Swan — certified French & English teacher. Personalized, fun lessons for all levels (A1 to C1). Book your 30-min trial today!",
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     "free trial French lesson",
   ],
   alternates: {
-    canonical: "https://www.swanlessons.com",
+    canonical: "https://swanlessons.com",
   },
   openGraph: {
     title: "Swan — French & English Teacher",
     description:
       "Certified French teacher offering personalized online lessons for all levels. Free 30-min trial!",
-    url: "https://www.swanlessons.com",
-    siteName: "Swan Lessons",
+    url: "https://swanlessons.com",
+    siteName: "Swan Lessons - French Online Teacher",
     images: [
       {
         url: "/og-image.jpg",
@@ -115,16 +115,27 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Swan Lessons - French Online Teacher",
+              url: "https://swanlessons.com",
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "Service",
               name: "Online French & English Lessons",
               description:
                 "Personalized online French and English lessons for all levels (A1 to C1). Free 30-minute trial available.",
-              url: "https://www.swanlessons.com",
+              url: "https://swanlessons.com",
               provider: {
                 "@type": "Person",
                 name: "Swan",
                 jobTitle: "French & English Teacher",
-                url: "https://www.swanlessons.com",
+                url: "https://swanlessons.com",
               },
               offers: [
                 {
