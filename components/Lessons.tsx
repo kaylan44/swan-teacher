@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { trackWhatsApp } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
@@ -65,6 +66,7 @@ export default function Lessons() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center justify-center gap-2 w-full bg-white text-primary-700 font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-primary-50 transition-colors shadow-md"
+                  onClick={() => trackWhatsApp("lessons_french")}
                 >
                   {t.lessons.ctaFrench}
                 </a>
@@ -100,6 +102,7 @@ export default function Lessons() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 btn-secondary text-sm w-full justify-center"
+                onClick={() => trackWhatsApp("lessons_english")}
               >
                 {t.lessons.ctaEnglish}
               </a>

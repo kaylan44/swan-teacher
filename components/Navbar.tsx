@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { trackFreeTrial } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -71,6 +72,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm py-2 px-4"
+              onClick={() => trackFreeTrial("navbar_desktop")}
             >
               {t.nav.cta} ✨
             </a>
@@ -113,7 +115,7 @@ export default function Navbar() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-sm w-full text-center"
+                className="btn-primary text-sm w-full text-center" onClick={() => trackFreeTrial("navbar_mobile")}
               >
                 {t.nav.cta} ✨
               </a>

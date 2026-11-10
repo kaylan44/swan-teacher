@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import { WHATSAPP_LINK, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { trackWhatsApp } from "@/lib/analytics";
 import { useSiteData } from "@/lib/SiteDataContext";
 import FadeIn from "./FadeIn";
 
@@ -57,6 +58,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-[#25D366] hover:bg-[#1ebe5c] text-white rounded-2xl p-5 transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-green-200 group"
+                onClick={() => trackWhatsApp("contact")}
               >
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg
